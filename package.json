@@ -1,0 +1,20 @@
+{
+  "name": "hcloud-client",
+  "version": "0.0.1",
+  "description": "Typed client for Hetzner Cloud API generated from official OpenAPI specification",
+  "license": "ISC",
+  "author": {
+    "name": "Marius Software",
+    "email": "hello@marius.eu",
+    "url": "https://marius.eu"
+  },
+  "scripts": {
+    "build": "rm -rf ./src ./dist && openapi -i https://docs.hetzner.cloud/spec.json -o ./src --name HcloudClient --useUnionTypes --useOptions --postfixServices '' && tsc"
+  },
+  "main": "dist/index.js",
+  "devDependencies": {
+    "@types/node": "^20.11.18",
+    "openapi-typescript-codegen": "^0.27.0",
+    "typescript": "^5.3.3"
+  }
+}
